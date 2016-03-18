@@ -43,6 +43,20 @@
     // button and clear form
     function createEventListener() {
         var submitButton = document.getElementById("convertButton");
+        if (submitButton.addEventListener){
+            submitButton.addEventListener("click", convert, false);
+        } else if (submitButton.attachEvent){
+            submitButton.attachEvent("onclick", convert);
+        }
+        // clear last starting value
+        document.getElementById('value').value = "";
+        // clear previous results
+        document.getElementById('sqRoot').innerHTML = "";
+    }
+    if (window.addEventListener) {
+        window.addEventListener("load", createEventListener, false);
+    } else if (window.attachEvent) {
+        window.attachEvent("onload", createEventListener);
     }
 </script>
 </body>
