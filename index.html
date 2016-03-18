@@ -18,7 +18,7 @@
     <h2>Square Root Calculator</h2>
     <form>
         <fieldset>
-            <label for="mValue">
+            <label for="value">
                 Enter a number
             </label>
             <input type="number" id="value" />
@@ -34,7 +34,7 @@
 </article>
 <script>
     var valueElement = document.getElementById("value");
-    var resultElement = document.getElementById("sgRoot");
+    var resultElement = document.getElementById("sqRoot");
     function convert() {
         var root = Math.sqrt(valueElement.value);
         resultElement.innerHTML = root.toFixed(2);
@@ -49,9 +49,9 @@
             submitButton.attachEvent("onclick", convert);
         }
         // clear last starting value
-        document.getElementById('value').value = "";
+        document.getElementById("value").value = "";
         // clear previous results
-        document.getElementById('sqRoot').innerHTML = "";
+        document.getElementById("sqRoot").innerHTML = "";
     }
     if (window.addEventListener) {
         window.addEventListener("load", createEventListener, false);
