@@ -32,5 +32,18 @@
         </fieldset>
     </form>
 </article>
+<script>
+    var valueElement = document.getElementById("value");
+    var resultElement = document.getElementById("sgRoot");
+    function convert() {
+        var root = Math.sqrt(valueElement.value);
+        resultElement.innerHTML = root.toFixed(2);
+    }
+    // add event listeners to calculate square root
+    // button and clear form
+    function createEventListener() {
+        var submitButton = document.getElementById("convertButton");
+    }
+</script>
 </body>
 </html>
